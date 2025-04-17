@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <input placeholder="Type a word" class="js-word-input"
+      onkeyup="
+        handleTypedWord();
+      "
+    />
+
+    <p class="js-word"></p>
+
+    <script>
+      function handleTypedWord() {
+        const wordElement = document.querySelector('.js-word-input').value;
+
+        document.querySelector('.js-word').innerHTML = wordElement;
+      }
+    </script>
+  </body>
+</html>

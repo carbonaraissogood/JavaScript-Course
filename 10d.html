@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gaming</title>
+
+    <style>
+      .gaming-button {
+        background-color: rgb(241, 238, 238);
+        color: black;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .isToggled-button {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="gaming-button isToggled-button"  onclick="
+      const button = document.querySelector('.gaming-button');
+      
+      if(!button.classList.contains('isToggled-button')) {
+        button.classList.add('isToggled-button');
+      } else {
+        button.classList.remove('isToggled-button');
+      }
+    ">Gaming</button>
+  </body>
+</html>

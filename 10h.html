@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+
+    <link rel="stylesheet" href="styles/10h.css">
+  </head>
+
+  <body>
+    <p>Youtube Subscribe Button</p>
+
+    <button onclick="
+      subscribe();
+    " class="js-subscribe-button subscribe-button">
+    Subscribe
+  </button>
+
+    <p>Rock Paper Scissors</p>
+    <a href="http://127.0.0.1:5500/09-rock-paper-scissors.html">Click me</a>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input placeholder = "Cost of order" class="js-cost-input cost-input" onkeydown="
+      //console.log(event.key);
+      handleCostKeydown(event);
+    ">
+    
+    <button class="calculate-button" onclick="
+      calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-cost"></p>
+
+    <p class="error-handler-js error-handler"></p>
+
+    <script src="scripts/10h.js"></script>
+  </body>
+</html>

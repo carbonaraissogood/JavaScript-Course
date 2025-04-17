@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9c</title>
+  </head>
+
+  <body>
+    <button onclick="
+      flipCoin('heads');
+    ">heads</button>
+
+    <button onclick="
+      flipCoin('tails');
+    ">tails</button>
+
+    <p class="js-result"></p>
+
+    <script>
+      function flipCoin(playerMove) {
+        document.querySelector('.js-result').innerHTML = `You chose: ${playerMove}`;
+      }
+
+    </script>
+  </body>
+</html>

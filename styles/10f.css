@@ -1,0 +1,14 @@
+.js-button {
+  background-color: rgb(241, 238, 238);
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.isToggled-button {
+  background-color: black;
+  color: white;
+}

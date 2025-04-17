@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11j</title>
+  </head>
+
+  <body>
+    <script>
+      let result = [];
+
+      addArrays([1, 2, 3, 4, 5], [1, 5, 3, 4, 11]);
+
+      function addArrays(array1, array2) {
+        for (let i = 0; i < array1.length; i++) {
+          result[i] = array1[i] + array2[i];
+        }
+        return console.log(result);
+      }
+
+    </script>
+  </body>
+</html>
