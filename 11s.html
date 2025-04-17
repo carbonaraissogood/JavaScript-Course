@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11s</title>
+  </head>
+  <body>
+    <script>
+      let result = [];
+      let removalCounter = 0;
+
+      function removeEgg(foods) {
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === 'egg') {
+            if (removalCounter < 2) {
+              removalCounter++;
+              continue;
+            }
+          }
+          result.push(foods[i]);
+        }
+        return console.log(result);
+      }
+
+      removeEgg(['egg', 'egg', 'milk', 'egg', 'bread', 'egg', 'cookies']); // returns milkbread
+    </script>
+  </body>
+</html>

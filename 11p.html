@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const array = ['search', 'hello', 'world', 'search', 'me', 'search'];
+      let isFound = false;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 'search') {
+          console.log(i);
+          isFound = true;
+          break;
+        }
+      }
+      if (!isFound) {
+        console.log(-1);
+      }
+    </script>
+  </body>
+</html>

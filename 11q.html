@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return console.log(i); // returns the index of the first occurrence
+          }
+        }
+        return console.log(-1);
+      }
+
+      findIndex([1, 2, 3, 'hello', 5], 'hello'); // returns 3
+    </script>
+  </body>
+</html>

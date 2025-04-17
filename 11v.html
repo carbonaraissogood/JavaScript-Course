@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unique Array</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, word, index) {
+        for (let i = 0; i < array.length; i++) {
+          console.log(array[i] + " " + word + " " + i + " " + index);
+          if (array[i] === word && index != i) {
+            return 1;
+          }
+        }
+        return -1;
+      }
+
+      let result = [];
+
+      function unique(array) {
+        result = [];
+        for (let i = 0; i < array.length; i++) {
+
+          let find = findIndex(array, array[i], i);
+          console.log(find);
+          //console.log(array[i] + " " + i);
+          if (find === -1) {
+            result.push(array[i]);
+          }
+        }
+        return console.log(result);
+      }
+
+      unique([1, 2, 3, 4, 5, 1]);
+      unique([1, 2, 3, 4, 5, 1, 3, 2]);
+      unique([1, 2, 3, 4, 5, 1, 3, 2]);
+    </script>
+  </body>
+</html>

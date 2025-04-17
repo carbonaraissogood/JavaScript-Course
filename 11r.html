@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let result = [];
+      function removeEgg(foods) {
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === 'egg') {
+            continue;
+          }
+          result.push(foods[i]);
+        }
+        return console.log(result);
+      }
+
+      removeEgg(['egg', 'milk', 'egg', 'bread', 'egg', 'cookies']); // returns milkbread
+    </script>
+  </body>
+</html>
