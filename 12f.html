@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>12E</title>
+    <title>12F</title>
   </head>
 
   <body>
@@ -11,8 +11,14 @@
     <p class="js-add"></p>
 
     <script>
+      let timeOutID;
+
       document.querySelector('.js-button').addEventListener('click', () => {
-        setTimeout(() => {
+
+        clearTimeout(timeOutID);
+
+        timeOutID = setTimeout(() => {
+          console.log(timeOutID);
           document.querySelector('.js-add').innerHTML = ``;
         }, 2000);
 
