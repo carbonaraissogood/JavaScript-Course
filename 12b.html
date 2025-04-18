@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12B</title>
+  </head>
+
+  <body>
+    <script>
+      const add = (a, b) => a + b;
+
+      const runTwice = (param) => {
+        param();
+        param();
+        return "done";
+      };
+
+      console.log(runTwice(() => console.log(add(2, 3))));
+      console.log(runTwice(() => console.log(add(3, 3))));
+
+      
+    </script>
+  </body>
+</html>
