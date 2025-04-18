@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="title"></title>
+  </head>
+
+  <body>
+    <button class="js-add-button button">Add</button>
+
+    <button class="js-remove-button button">Remove</button>
+
+    <script>
+      let message = 0;
+      let intervalID = 0;
+
+      let allButtons = document.querySelectorAll('.button');
+
+      if (allButtons.length > 0) {
+        allButtons[0].addEventListener('click', () => {
+          message++;
+          console.log(message);
+
+          updateTitle(message);
+        });
+
+        allButtons[1].addEventListener('click', () => {
+          if (message === 0) {
+            return console.log('No messages to remove');
+          }
+
+          message--;
+          console.log(message);
+
+          updateTitle(message);
+        });
+
+        updateTitle(message);
+
+      } else {
+        console.log('No buttons found');
+      }
+
+      let isApp = true;
+
+      function updateTitle(message) {
+        console.log('Im at updateTitle');
+        
+        clearInterval(intervalID);
+        
+        if (message === 0) {
+          document.title = 'App';
+          console.log('im here');
+          return;
+        }
+
+        intervalID = setInterval (() => {
+          if (isApp) {
+            console.log(isApp);
+            document.title = 'App';
+          } else {
+            document.title = `(${message}) New Messages`;
+          }
+          isApp = !isApp;
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="title"></title>
+  </head>
+
+  <body>
+    <button class="js-add-button">Add</button>
+
+    <button class="js-remove-button">Remove</button>
+
+    <script>
+      let num = 0;
+
+      document.querySelector('.js-add-button').addEventListener('click', () => {
+        num++;
+      });
+
+      document.querySelector('.js-remove-button').addEventListener('click', () => {
+        num--;
+      });
+
+
+      setInterval(() => {
+        document.title = `App`;
+        console.log(`App`);
+      }, 1000);
+
+      setInterval(() => {
+        document.title = `(${num}) New Messages`;
+        console.log(`(${num}) New Messages`);
+      }, 2000);
+
+    </script>
+  </body>
+</html>
